@@ -10,7 +10,7 @@ const msgRoutes = require("./routes/message.route.js");
 const chanRoutes = require("./routes/channel.route.js");
 const dmsgRoutes = require("./routes/dmessage.route.js");
 const Moralis = require('moralis').default;
-
+const path =  require('path');
 // to use our .env variables
 require('dotenv').config();
 
@@ -27,6 +27,12 @@ app.use(cors({
     origin: ['http://localhost:3000'],
     credentials: true,
 }));
+
+app.use(express.static(path.join(__dirname, "build")));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 
 // Create Socket.io server
 const io = socketIo(server, {
