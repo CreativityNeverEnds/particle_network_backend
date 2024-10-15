@@ -181,7 +181,7 @@ const startServer = async () => {
     await Moralis.start({
         apiKey: process.env.MORALIS_API_KEY,
     });
-
+    console.log(process.env.MONGO_URL,"process.env.MONGO_URLprocess.env.MONGO_URLprocess.env.MONGO_URL")
     mongoose.connect(process.env.MONGO_URL)
         .then(() => {
             console.log("MONGODB CONNECTED");
