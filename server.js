@@ -181,8 +181,7 @@ const startServer = async () => {
     await Moralis.start({
         apiKey: process.env.MORALIS_API_KEY,
     });
-    console.log(process.env.MONGO_URL,"process.env.MONGO_URLprocess.env.MONGO_URLprocess.env.MONGO_URL")
-    mongoose.connect(process.env.MONGO_URL)
+    mongoose.connect("mongodb+srv://superengineer199885:I1ZX9lcGM3M2ANWF@cluster0.ev4fb.mongodb.net/marketplace")
         .then(() => {
             console.log("MONGODB CONNECTED");
             // Start the HTTP server after successful MongoDB connection
