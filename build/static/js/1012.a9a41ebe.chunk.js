@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkparticle_auth_cra=self.webpackChunkparticle_auth_cra||[]).push([[1012],{11012:(t,e,a)=>{a.d(e,{CognitoIdentityClient:()=>n.D,GetCredentialsForIdentityCommand:()=>i.t,GetIdCommand:()=>r.x});var n=a(84035),i=a(34918),r=a(42204)}}]);
